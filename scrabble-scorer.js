@@ -64,6 +64,7 @@ function vowelBonusScorer(word){
 
 function scrabbleScorer(word){
    let score = 0;
+   newPointStructure[" "] = 0
    for (letter in word) {
      for (const number in newPointStructure) {
  
