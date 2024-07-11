@@ -68,12 +68,13 @@ function scrabbleScorer(word){
    for (letter in word) {
      for (const number in newPointStructure) {
  
-       if (word[letter] === number){
+       if (word[letter].toLowerCase() === number){
          score += newPointStructure[number]
        }
  
      }
    }
+   
    return score;
  }
 
@@ -102,7 +103,7 @@ const scoringAlgorithms = [simpleScore, bonusVowels, scrabble];
 function scorerPrompt(algorithms) {
    let choice = Number(input.question("Which scoring algorithm would you like to use? \n\n0 - Simple: One point per character\n1 - Vowel Bonus: Vowels are worth 3 points\n2 - Scrabble: Uses scrabble point system\nEnter 0, 1, or 2: "))
 
-   while (choice < -1 || choice > 3){
+   while (choice < -0 || choice > 2){
       choice = Number(input.question("\nInvalid input, please choose 0, 1, or 2: "))
    }
    return algorithms[choice];
