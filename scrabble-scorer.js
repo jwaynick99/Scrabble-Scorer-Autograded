@@ -31,7 +31,7 @@ function oldScrabbleScorer(word) {
 	return letterPoints;
  }
 
-// your job is to finish writing these functions and variables that we've named //
+// your job is to finish writing these functions and variables that we've name //
 // don't change the names or your program won't work as expected. //
 
 function initialPrompt(scorerPrompt) {
